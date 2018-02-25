@@ -1,0 +1,8 @@
+{
+  {% for object in object_list %}
+    {"{{object.name}}", "{{object.tagline}}"} {% if not forloop.last %},{% endif %}
+
+  {% endfor %}
+}
+
+

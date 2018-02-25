@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+<table id="demo-datatable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Tagline</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for object in object_list %}
+            <tr>
+                <td>{{object.name}}</td>
+                <td>{{object.tagline}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function() {
+        $('#demo-datatable').DataTable( {
+            "processing": true,
+            "serverSide": true,
+            "ajax": "{% url 'datatable-demo-json' %}"
+        });
+    });
+
+</script>
+

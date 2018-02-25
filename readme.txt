@@ -1,0 +1,1 @@
+http://django-datatable-view.readthedocs.io/en/latest/datatableview/datatables.html?highlight=server
