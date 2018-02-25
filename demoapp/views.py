@@ -13,6 +13,6 @@ class MyView(DatatableView):
             ],
         'search_fields': [
             'name',
-        ]
+        ],
     }
 
